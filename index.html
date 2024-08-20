@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDE Beaverwood</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BDE Beaverwood</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Événements</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Galerie</a></li>
+            </ul>
+        </nav>
+        <button id="connexion">Connexion</button>
+    </header>
+    <main>
+        <div class="events-container" id="eventsContainer">
+            <!-- Les événements seront ajoutés ici dynamiquement -->
+        </div>
+        <button id="addEventButton">Ajouter un événement</button>
+    </main>
+
+    <!-- Formulaire modal pour ajouter un événement -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ajouter un événement</h2>
+            <form id="eventForm">
+                <label for="eventTitle">Titre :</label>
+                <input type="text" id="eventTitle" required>
+                
+                <label for="eventDate">Date :</label>
+                <input type="date" id="eventDate" required>
+                
+                <label for="eventDescription">Description :</label>
+                <textarea id="eventDescription" required></textarea>
+                
+                <label for="eventImage">Image :</label>
+                <input type="file" id="eventImage" accept="image/*" required>
+                
+                <button type="submit">Ajouter</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
